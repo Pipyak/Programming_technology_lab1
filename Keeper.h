@@ -2,6 +2,7 @@
 #ifndef _KEEPER_H
 #define _KEEPER_H
 #include <iostream>
+#include <string>
 #include "Dequeue.h"
 
 
@@ -11,7 +12,7 @@ private:
 public:
 	Keeper(){}
 	int size() { return objects.size(); }
-	void file_in();
+	Keeper& file_in();
 	void file_out();
 	void k_input();
 	void k_delete();

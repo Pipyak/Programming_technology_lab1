@@ -15,7 +15,7 @@ public:
 	virtual void change();
 	virtual void printf() { std::cout << *this; }
 	virtual void scanf() { std::cin >> *this; }
-	virtual University& file_in();
+	virtual University& file_in(std::istream& is);
 	virtual void file_out() = 0;
 	friend std::ostream& operator<<(std::ostream& os, University& u);
 	friend std::istream& operator>>(std::istream& is, University& u);
@@ -37,7 +37,7 @@ public:
 	virtual void change();
 	virtual void printf() { std::cout << *this; }
 	virtual void scanf() { std::cin >> *this; }
-	virtual Student& file_in();
+	virtual Student& file_in(std::istream& is);
 	virtual void file_out();
 	friend std::ostream& operator<<(std::ostream& os, Student& s);
 	friend std::istream& operator>>(std::istream& is, Student& s);
@@ -56,7 +56,7 @@ public:
 	virtual void change();
 	void change_g();
 	void change_s();
-	virtual Professor& file_in();
+	virtual Professor& file_in(std::istream& is);
 	virtual void file_out();
 	virtual void printf() { std::cout << *this; }
 	virtual void scanf() { std::cin >> *this; }
@@ -75,7 +75,7 @@ public:
 
 	virtual ObjectType type()const;
 	virtual void change();
-	virtual Administration& file_in();
+	virtual Administration& file_in(std::istream& is);
 	virtual void file_out();
 	virtual void printf() { std::cout << *this; }
 	virtual void scanf() { std::cin >> *this; }
